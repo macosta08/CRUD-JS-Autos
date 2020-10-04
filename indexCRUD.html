@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <title>Mi Primer CRUD con JS</title>
+</head>
+<body>
+    <div class="container">
+        <div class="toppane">
+            <h2 class="title">Lista de Autos</h2>
+        </div>
+        <div class="leftpane">
+            <h4 class="title" id="idAddEdit-title">Nuevo Auto</h4>
+            <div id="form-padding">
+                <form id="miForm" onsubmit="event.preventDefault(), submitCar()" >
+                    <!--- -------------------------------------------------------------readonly = solo lectura-->
+                    <input type="hidden" class="form-control" id="id" placeholder="id" readonly>
+                    <div class="form-group">
+                    <label for="marcaId">Marca</label>
+                    <input type="text" class="form-control" id="marcaId" placeholder="marca">
+                    </div>
+                    <div class="form-group">
+                        <label for="modeloId">Modelo</label>
+                        <input type="text" class="form-control" id="modeloId" placeholder="modelo">
+                    </div>
+                    <div class="form-group">
+                    <label for="colorId">Color</label>
+                    <select class="form-control" id="colorId">
+                        <option>Amarillo</option>
+                        <option>Azul</option>
+                        <option>Blanco</option>
+                        <option>Dorado</option>
+                        <option>Negro</option>
+                        <option>Plata</option>
+                        <option>Rojo</option>
+                        <option>Verde</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="yearId">Año</label>
+                        <input type="number" class="form-control" id="yearId" placeholder="año">
+                    </div>
+                    <div class="form-group">
+                        <label for="precioId">Precio</label>
+                        <input type="number" class="form-control" id="precioId" placeholder="precio">
+                    </div>
+                    <button type="submit" class="btn btn-dark" id="idAddEdit-btn">Agregar</button>
+                </form>
+            </div>
+        </div>
+        <div class="middlepane">
+            <table class="table">
+                <thead id="table-autos-header" class="thead-dark">
+                    <!--Aquí va mi encabezado que genero desde JS-->
+                </thead>
+                <tbody id="table-autos-body">
+                    <!--Aquí van mis filas que genero desde JS-->
+                </tbody>
+              </table>
+        </div>
+        <div class="rightpane">
+            <h4 class="title">Filtros</h4>
+            <div id="form-padding">
+                <form id="filterForm" onsubmit="event.preventDefault(), filterCars()" >
+
+                    <div class="form-group">
+                        <label for="filterIdMarca">Marca</label>
+                        <select class="form-control" id="filterIdMarca">
+                            <option>Todos</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="filterIdColor">Color</label>
+                        <select class="form-control" id="filterIdColor">
+                            <option>Todos</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="filterIdAño">Año</label>
+                        <select class="form-control" id="filterIdAño">
+                            <option>Todos</option>
+                        </select>
+                    </div>
+                        
+                    <button type="submit" class="btn btn-dark" id="idFilter-btn">Filtrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+ <script src="./JS/CRUD.js"></script>   
+</body>
+</html>

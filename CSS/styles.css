@@ -1,0 +1,51 @@
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .title {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+ 
+  .leftpane {
+      width: 20%;
+      height: 100%;
+      float: left;
+      background-color: rgb(230, 230, 227);
+      border-collapse: collapse;
+  }
+  #form-padding {
+      margin-left: 8%;
+      margin-right: 8%;
+  }
+  
+  .middlepane {
+      width: 60%;
+      height: 100%;
+      float: left;
+      background: rgb(255, 255, 255);
+      border-collapse: collapse;
+  }
+  
+  .rightpane {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    float: right;
+    background-color: rgb(230, 230, 227);
+    border-collapse: collapse;
+  }
+  
+  .toppane {
+    width: 100%;
+    height: 12%;
+    border-collapse: collapse;
+    background: rgb(250, 246, 3);
+  }
