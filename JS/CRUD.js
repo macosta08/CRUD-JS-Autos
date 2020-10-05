@@ -66,8 +66,8 @@ function createRowTbody(car) {
                 <td>${car.color}</td>
                 <td>${car.año}</td>
                 <td>${car.precio}</td>
-                <td><i class="fa fa-pencil-square-o" style="font-size:24px" onclick="loadCarData(${car.id})"></i></td>
-                <td><i class="fa fa-trash-o" style="font-size:24px" onclick="deleteCar(${car.id})"></i></td>
+                <td><a href="#" class="icon"><i class="fa fa-pencil-square-o" style="font-size:24px" onclick="loadCarData(${car.id})"></i></a></td>
+                <td><a href="#" class="icon"><i class="fa fa-trash-o" style="font-size:24px" onclick="deleteCar(${car.id})"></i></a></td>
             </tr>`;
     return row; 
   }
